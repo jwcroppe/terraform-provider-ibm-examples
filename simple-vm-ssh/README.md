@@ -3,6 +3,8 @@
 This example creates a virtual machine (VM) in the IBM Cloud and makes it
 externally available (read: publicly accessible) via SSH. Once the VM is
 done being created, its public IP address will be displayed for easy access.
+By default, an Ubuntu VM will be created, but this can be changed by updating
+the Terraform variables (see below) to point to a different image.
 
 More specifically, it creates the following resources:
 
@@ -16,8 +18,9 @@ To run the example, you will need to:
 
 1. Clone this Git repository
 2. [Download and configure](https://github.com/IBM-Cloud/terraform-provider-ibm) the IBM Cloud Terraform provider
-3. Obtain your [IBM Cloud API key](https://cloud.ibm.com) (needed for the next step)
-4. Update the variables.tfvars file to suit your needs
+3. Obtain your [IBM Cloud API key](https://cloud.ibm.com) (needed for step #5)
+4. [Upload your public SSH key](https://cloud.ibm.com/vpc/compute/sshKeys) to IBM Cloud (the ID is needed for step #5)
+5. Update the variables.tfvars file to suit your needs
 
 Next, you can run the example by invoking...
 
