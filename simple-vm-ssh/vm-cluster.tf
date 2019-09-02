@@ -1,33 +1,33 @@
 variable "vpc_name" {
     description = "Denotes the name of the VPC to create"
-    default = "demo-vpc"
+    default     = "demo-vpc"
 }
 
 variable "subnet_name" {
     description = "Denotes the name of the subnet to create"
-    default = "demo-subnet"
+    default     = "demo-subnet"
 }
 
 variable "vm_name" {
     description = "Denotes the name of the VM to create"
-    default = "demo-vm"
+    default     = "demo-vm"
 }
 
 variable "image_id" {
     description = "Denotes which operating system image to boot"
     # Default is an Ubuntu 16.04 image
-    default = "cfdaf1a0-5350-4350-fcbc-97173b510843"
+    default     = "cfdaf1a0-5350-4350-fcbc-97173b510843"
 }
 
 variable "profile_id" {
     description = "Denotes the VM profile to boot"
     # Default is 2 vcpus with 8 GB of memory
-    default = "bc1-2x8"
+    default     = "bc1-2x8"
 }
 
 variable "network_port_speed" {
     description = "Denotes the VM's primary NIC speed"
-    default = "100"
+    default     = "100"
 }
 
 variable "public_key_id" {
@@ -36,7 +36,7 @@ variable "public_key_id" {
 
 variable "floating_ip_name" {
     description = "Denotes the name of the floating IP for the VM"
-    default = "demo-fip"
+    default     = "demo-fip"
 }
 
 #################################################
