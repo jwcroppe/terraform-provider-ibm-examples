@@ -50,7 +50,7 @@ resource "ibm_is_vpc" "vpc" {
 resource "ibm_is_subnet" "subnet" {
     name            = "${var.subnet_name}"
     vpc             = "${ibm_is_vpc.vpc.id}"
-    zone            = "${var.ibmcloud_region}"
+    zone            = "${var.ibmcloud_zone}"
     ipv4_cidr_block = "10.240.0.0/24"
 }
 
@@ -87,7 +87,7 @@ resource "ibm_is_floating_ip" "fip1" {
 resource "ibm_is_security_group_rule" "sg1-tcp-rule" {
     depends_on = ["ibm_is_floating_ip.fip1"]
     group      = "${ibm_is_vpc.vpc.default_security_group}"
-    direction  = "ingress"
+    direction  = "inbound"
     remote     = "0.0.0.0/0"
 
     tcp = {
