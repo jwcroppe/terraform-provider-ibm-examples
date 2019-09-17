@@ -119,10 +119,10 @@
     {
       "name": "processors",
       "type": "string",
-      "description": "Number of virtual processors",
+      "description": "Number of Virtual Processors",
       "default": "1",
       "hidden": false,
-      "label": "Number of virtual processors",
+      "label": "Number of Virtual Processors",
       "secured": false,
       "required": true,
       "immutable": false,
