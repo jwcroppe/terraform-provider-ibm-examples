@@ -19,5 +19,5 @@ output "progress" {
 }
 
 output "volume_id" {
-    value = "${ibm_pi_volume.powervolumes.id}"
+    value = "${ibm_pi_volume.power_volumes.id}"
 }
