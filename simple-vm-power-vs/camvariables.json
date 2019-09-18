@@ -41,7 +41,7 @@
       "description": "IBM Cloud API Key",
       "hidden": false,
       "label": "IBM Cloud API Key",
-      "secured": false,
+      "secured": true,
       "required": true,
       "immutable": false,
       "group_name": "cloud"
