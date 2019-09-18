@@ -28,17 +28,17 @@ The planning phase (validates the Terraform configuration)
 
 ```shell
 terraform init
-terraform plan
+terraform plan -var-file=variables.tfvars
 ```
 
 The apply phase (provisions the infrastructure)
 
 ```shell
-terraform apply
+terraform apply -var-file=variables.tfvars
 ```
 
 The destroy phase (deletes the infrastructure)
 
 ```shell
-terraform destroy
+terraform destroy -var-file=variables.tfvars
 ```
