@@ -12,6 +12,10 @@ variable "vm_name" {
     default     = "demo-VM"
 }
 
+variable "vm_private_key" {
+    description = "The private key used to make SSH connections to the VM"
+}
+
 variable "power_instance_id" {
     description = "Power Virtual Server instance ID associated with your IBM Cloud account (note that this is NOT the API key)"
 }
@@ -32,7 +36,7 @@ variable "proc_type" {
 }
 
 variable "ssh_key_name" {
-    description = "SSH key name to be used for remote SSH logins"
+    description = "SSH key name in IBM Cloud to be used for SSH logins"
 }
 
 variable "volume_name" {
