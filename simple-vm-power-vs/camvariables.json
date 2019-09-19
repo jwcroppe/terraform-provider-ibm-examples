@@ -119,9 +119,9 @@
     {
       "name": "ssh_key_name",
       "type": "string",
-      "description": "Name of SSH Key in IBM Cloud for Login",
+      "description": "Name of SSH Key in IBM Cloud for VM Login",
       "hidden": false,
-      "label": "Name of SSH Key in IBM Cloud for Login",
+      "label": "Name of SSH Key in IBM Cloud for VM Login",
       "secured": false,
       "required": true,
       "immutable": false,
