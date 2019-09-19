@@ -42,6 +42,7 @@ resource "ibm_pi_instance" "pvminstance" {
 
         connection {
             type        = "ssh"
+            timeout     = "30m"
             user        = "root"
             private_key = "${var.vm_private_key}"
         }
