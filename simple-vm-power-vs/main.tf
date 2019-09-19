@@ -1,5 +1,10 @@
 ## Template to be used by the IBM Provider for Power Systems
 
+resource "local_file" "vm_private_key" {
+    secure_content = "${var.vm_private_key}"
+    filename       = "tmp/id_rsa"
+}
+
 resource "ibm_pi_volume" "power_volumes" {
     pi_volume_size       = "${var.volume_size}"
     pi_volume_name       = "${var.volume_name}"
@@ -44,7 +49,7 @@ resource "ibm_pi_instance" "pvminstance" {
             type        = "ssh"
             timeout     = "30m"
             user        = "root"
-            private_key = "${var.vm_private_key}"
+            private_key = "${file("${local_file.vm_private_key.filename}")}"
         }
     }
 }
