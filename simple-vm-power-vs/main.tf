@@ -1,8 +1,8 @@
 ## Template to be used by the IBM Provider for Power Systems
 
 resource "local_file" "vm_private_key" {
-    secure_content = "${var.vm_private_key}"
-    filename       = "tmp/id_rsa"
+    sensitive_content = "${var.vm_private_key}"
+    filename          = "tmp/id_rsa"
 }
 
 resource "ibm_pi_volume" "power_volumes" {
