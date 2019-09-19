@@ -49,7 +49,7 @@ resource "ibm_pi_instance" "pvminstance" {
             type        = "ssh"
             timeout     = "30m"
             user        = "root"
-            private_key = "${file("${local_file.vm_private_key.filename}")}"
+            private_key = "${file("tmp/id_rsa")}"
         }
     }
 }
