@@ -36,8 +36,8 @@ resource "ibm_pi_instance" "pvminstance" {
 
     provisioner "remote-exec" {
         scripts = [
-            "wait_for_vm.sh",
-            "bootstrap-aix.sh",
+            "scripts/wait_for_vm.sh",
+            "scripts/bootstrap-aix.sh",
         ]
 
         connection {
