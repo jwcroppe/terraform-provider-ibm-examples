@@ -33,4 +33,17 @@ resource "ibm_pi_instance" "pvminstance" {
     pi_replication_policy = "${var.replication_policy}"
     pi_replicants         = "${var.replicants}"
     pi_cloud_instance_id  = "${var.power_instance_id}"
+
+    provisioner "remote-exec" {
+        scripts = [
+            "wait_for_vm.sh",
+            "bootstrap-aix.sh",
+        ]
+
+        connection {
+            type        = "ssh"
+            user        = "root"
+            private_key = "${var.vm_private_key}"
+        }
+    }
 }
