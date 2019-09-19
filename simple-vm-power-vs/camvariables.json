@@ -106,11 +106,22 @@
       "group_name": "vm"
     },
     {
+      "name": "vm_private_key",
+      "type": "string",
+      "description": "Private Key to SSH to the VM",
+      "hidden": false,
+      "label": "Private Key to SSH to the VM",
+      "secured": true,
+      "required": true,
+      "immutable": false,
+      "group_name": "vm"
+    },
+    {
       "name": "ssh_key_name",
       "type": "string",
-      "description": "Name of SSH Key for Login",
+      "description": "Name of SSH Key in IBM Cloud for Login",
       "hidden": false,
-      "label": "Name of SSH Key for Login",
+      "label": "Name of SSH Key in IBM Cloud for Login",
       "secured": false,
       "required": true,
       "immutable": false,
