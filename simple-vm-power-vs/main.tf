@@ -47,7 +47,7 @@ resource "ibm_pi_instance" "pvminstance" {
 
         connection {
             type        = "ssh"
-            host        = "${ibm_pi_instance.pvminstance.addresses[0]}"
+            host        = "${ibm_pi_instance.pvminstance.addresses.0.ip}"
             timeout     = "30m"
             user        = "root"
             private_key = "${file("${local_file.vm_private_key.filename}")}"
