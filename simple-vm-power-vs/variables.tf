@@ -12,8 +12,8 @@ variable "vm_name" {
     default     = "demo-VM"
 }
 
-variable "vm_private_key" {
-    description = "The private key used to make SSH connections to the VM"
+variable "vm_private_key_base64" {
+    description = "The base64-encoded form of the private key used to make SSH connections to the VM"
 }
 
 variable "power_instance_id" {
