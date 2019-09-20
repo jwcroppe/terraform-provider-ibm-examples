@@ -106,7 +106,7 @@
       "group_name": "vm"
     },
     {
-      "name": "vm_private_key",
+      "name": "vm_private_key_base64",
       "type": "string",
       "description": "Base64-encoded Private Key to SSH to the VM",
       "hidden": false,
