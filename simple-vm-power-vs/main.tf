@@ -1,7 +1,7 @@
 ## Template to be used by the IBM Provider for Power Systems
 
 resource "local_file" "vm_private_key" {
-    content_base64    = "${var.vm_private_key}"
+    content_base64    = "${var.vm_private_key_base64}"
     filename          = "tmp/id_rsa"
 }
 
