@@ -39,18 +39,18 @@ resource "ibm_pi_instance" "pvminstance" {
     pi_replicants         = "${var.replicants}"
     pi_cloud_instance_id  = "${var.power_instance_id}"
 
-##    provisioner "remote-exec" {
-##        scripts = [
-##            "scripts/wait_for_vm.sh",
-##            "scripts/bootstrap-aix.sh",
-##        ]
-##
-##        connection {
-##            type        = "ssh"
-##            host        = "${lookup(ibm_pi_instance.pvminstance.addresses[1], "ip")}"
-##            timeout     = "15m"
-##            user        = "root"
-##            private_key = "${file("${local_file.vm_private_key.filename}")}"
-##        }
-##    }
+    provisioner "remote-exec" {
+        scripts = [
+            "scripts/wait_for_vm.sh",
+            "scripts/bootstrap-aix.sh",
+        ]
+
+        connection {
+            type        = "ssh"
+            host        = "${lookup(ibm_pi_instance.pvminstance.addresses[0], "externalip")}"
+            timeout     = "15m"
+            user        = "root"
+            private_key = "${file("${local_file.vm_private_key.filename}")}"
+        }
+    }
 }
