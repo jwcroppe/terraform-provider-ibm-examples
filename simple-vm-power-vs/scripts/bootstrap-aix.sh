@@ -10,6 +10,7 @@ chfs -a size=+2G /usr
 yum install -y MySQL.ppc
 /opt/freeware/bin/mysqladmin -u root password 's3cur3Pa5sw0rd'
 /opt/freeware/bin/mysql --user="root" --password="s3cur3Pa5sw0rd" --database="mysql" --execute="GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';"
+/opt/freeware/bin/mysql --user="root" --password="s3cur3Pa5sw0rd" --database="mysql" --execute="FLUSH PRIVILEGES;"
 
 # Load some test data in the database
 yum update -y curl
