@@ -22,10 +22,6 @@
     {
       "name": "network",
       "label": "Network Configuration"
-    },
-    {
-      "name": "volume",
-      "label": "Data Volume Configuration"
     }
   ],
   "output_groups": [
@@ -229,64 +225,6 @@
       "required": true,
       "immutable": false,
       "group_name": "network"
-    },
-    {
-      "name": "volume_name",
-      "type": "string",
-      "description": "Name of Data Volume",
-      "default": "demo-data-volume",
-      "hidden": false,
-      "label": "Name of Data Volume",
-      "secured": false,
-      "required": true,
-      "immutable": false,
-      "group_name": "volume"
-    },
-    {
-      "name": "volume_size",
-      "type": "string",
-      "description": "Size of Data Volume (GB)",
-      "default": "40",
-      "hidden": false,
-      "label": "Size of Data Volume (GB)",
-      "secured": false,
-      "required": true,
-      "immutable": false,
-      "group_name": "volume"
-    },
-    {
-      "name": "volume_type",
-      "type": "string",
-      "description": "Type of Data Volume Disk (e.g., ssd)",
-      "default": "ssd",
-      "hidden": false,
-      "label": "Type of Data Volume Disk (e.g., ssd)",
-      "secured": false,
-      "required": true,
-      "immutable": false,
-      "group_name": "volume"
-    },
-    {
-      "name": "shareable",
-      "type": "string",
-      "description": "Is the Data Volume Shareable",
-      "hidden": false,
-      "label": "Is the Data Volume Shareable",
-      "secured": false,
-      "options": [
-        {
-          "value": "true",
-          "label": "True"
-        },
-        {
-          "value": "false",
-          "label": "False",
-          "default": "true"
-        }
-      ],
-      "required": true,
-      "immutable": false,
-      "group_name": "volume"
     }
   ],
   "template_output_params": [
