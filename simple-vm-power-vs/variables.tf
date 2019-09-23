@@ -39,21 +39,6 @@ variable "ssh_key_name" {
     description = "SSH key name in IBM Cloud to be used for SSH logins"
 }
 
-variable "volume_name" {
-    description = "Name of the data volume to be created"
-    default     = "demo-data-volume"
-}
-
-variable "volume_size" {
-    description = "Data volume size (GB) to be created"
-    default     = "40"
-}
-
-variable "volume_type" {
-    description = "Type of data volume to be created - ssd/hdd"
-    default     = "ssd"
-}
-
 variable "shareable" {
     description = "Should the data volume be shared or not - true/false"
     default     = "true"
