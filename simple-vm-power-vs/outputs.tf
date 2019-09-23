@@ -17,7 +17,3 @@ output "ip_address" {
 output "progress" {
     value = "${ibm_pi_instance.pvminstance.pi_progress}"
 }
-
-output "volume_id" {
-    value = "${ibm_pi_volume.power_volumes.id}"
-}
