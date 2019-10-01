@@ -48,5 +48,5 @@ terraform destroy
 ```
 
 There is also a **camvariables.json** file available so that you can import this GitHub
-repository as an IBM Cloud Automate Manager (CAM) template, allowing you to quickly provision a Power
+repository as an IBM Cloud Automation Manager (CAM) template, allowing you to quickly provision a Power
 Systems VM in the IBM Cloud via CAM.
